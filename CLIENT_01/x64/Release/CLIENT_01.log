@@ -1,0 +1,8 @@
+﻿  main_client.cpp
+  test01.cpp
+  test02.cpp
+  Generazione codice in corso...
+  Previous IPDB not found, fall back to full compilation.
+  All 256 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Generazione codice terminata
+  CLIENT_01.vcxproj -> D:\CURL\CLIENT_01\x64\Release\CLIENT_01.exe
