@@ -36,7 +36,8 @@ int main() {
                 //double z = 3;
                 //std::string command = "curl --insecure -X POST -H \"Content-Type: application/json\" -d \"{\\\"x\\\": 1.4555, \\\"y\\\": 2.34333, \\\"z\\\": 3.67888}\" https://127.0.0.1:44443/receive"; //forma corretta
                 std::ostringstream oss;
-                oss << "curl --insecure -X POST -H \"Content-Type: application/json\" -d \"{\\\"x\\\": " << x << ", \\\"y\\\": " << y << ", \\\"z\\\": " << z << "}\" https://192.168.43.68:44443/receive"; //ok streaming   funzionante
+                //oss << "curl --insecure -X POST -H \"Content-Type: application/json\" -d \"{\\\"x\\\": " << x << ", \\\"y\\\": " << y << ", \\\"z\\\": " << z << "}\" https://192.168.1.12:443/receive"; //ok streaming   funzionante
+                oss << "curl --insecure -X POST -H \"Content-Type: application/json\" -d \"{\\\"x\\\": " << x << ", \\\"y\\\": " << y << ", \\\"z\\\": " << z << "}\" https://127.0.0.1:4443/receive"; //ok streaming   funzionante
                 std::string command = oss.str();
 
                 // Esegui il comando curl utilizzando system()
@@ -61,7 +62,9 @@ int main() {
                 }
 
                 // Aspettare 1 secondo prima di inviare la prossima richiesta
-                std::this_thread::sleep_for(std::chrono::seconds(1));
+                //std::this_thread::sleep_for(std::chrono::seconds(1));
+                //std::this_thread::sleep_for(std::chrono::milliseconds(250));
+
             }
             else {
                 std::cerr << "Errore nella lettura dei dati dalla riga: " << line << std::endl;
